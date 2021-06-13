@@ -1,10 +1,26 @@
-import Button from './component/button'
+import ButtonComponent from './component/button'
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-const App=()=> {
-  return (
-    <div className="app-container">
+import { Button } from 'react-bootstrap';
 
-      <Button /> 
+const App = () => {
+  const [Display, setDispaly] = useState(false)
+
+  const Show = () => {
+    setDispaly(true)
+  }
+  const Hide = () => {
+    setDispaly(false)
+  }
+  return (
+
+    <div className={Display ? "app-container" : "app-container-1"}>
+      <Button onClick={() => Show()} className="start-btn" variant="primary">Start</Button>
+      <div className={Display ? "show" : "hide"}>
+
+        <ButtonComponent hide={() => Hide()} />
+      </div>
     </div>
   )
 }

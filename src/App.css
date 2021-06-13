@@ -1,0 +1,23 @@
+.app-container {
+    background-color: rgb(167, 167, 167);
+    height: 100vh;
+    padding: 20px !important;
+}
+
+.app-container-1 {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    padding: 20px !important;
+}
+
+.start-btn {
+    margin: 10px 200px;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
