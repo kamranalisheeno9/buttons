@@ -1,3 +1,15 @@
+.app-container {
+    background-color: rgb(167, 167, 167);
+    height: 100vh;
+
+}
+
+.app-container-1 {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+
+}
+
 .main-container {
     width: 450px;
     background-color: white;
@@ -18,7 +30,10 @@
     font-size: 14px;
     color: rgb(146, 146, 146);
 }
-
+.start-btn{
+    text-align: center;
+    padding-top: 20px;
+}
 .input-field {
     padding: 20px 10px;
 }
@@ -64,5 +79,12 @@
     margin-right: 10px;
     float: right;
     background-color: blue;
+}
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
 }
 

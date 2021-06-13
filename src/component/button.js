@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './button.css'
 import {
-  Container,
-  Row,
-  Col,
+  
   Form,
   Button,
   InputGroup,
@@ -12,16 +10,31 @@ import {
   Modal
 } from 'react-bootstrap';
 import { GoLocation } from "react-icons/go";
-const ButtonFunc = ({ hide }) => {
+const ButtonFunc = () => {
   const [Input,
     setInput] = useState("")
+    const [Display, setDispaly] = useState(false)
+
+    const Show = () => {
+      setDispaly(true)
+    }
+    const Hide = () => {
+      setDispaly(false)
+    }
 
   const cancel = () => {
     setInput("")
   }
 
+
   return (
-    <div >
+    <div className={Display ? "app-container" : "app-container-1"} >
+      <div className="start-btn">
+
+      <Button onClick={() => Show()}  variant="primary">Open</Button>
+      </div>
+
+    <div className={Display ? "show" : "hide"}>
       
       <Modal.Dialog>
         <Modal.Header closeButton>
@@ -60,7 +73,7 @@ const ButtonFunc = ({ hide }) => {
         </Modal.Body>
 
         <Modal.Footer className="buttons">
-          <Button className="btn-1" variant="light" onClick={hide}>Tagasu</Button>
+          <Button className="btn-1" variant="light" onClick={()=>Hide()}>Tagasu</Button>
 
           <Button
             variant="primary"
@@ -76,6 +89,8 @@ const ButtonFunc = ({ hide }) => {
 
 
     </div>
+    </div>
+
   );
 }
 
