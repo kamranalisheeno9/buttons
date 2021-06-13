@@ -15,8 +15,13 @@ const App = () => {
   }
   return (
 
-    <div className={Display ? "app-container" : "app-container-1"}>
-      <Button onClick={() => Show()} className="start-btn" variant="primary">Start</Button>
+    <div 
+    className={Display ? "app-container" : "app-container-1"}
+    >
+      <div className="toggle-btn">
+
+      <Button onClick={() => Show()} className="start-btn" variant="primary">Open</Button>
+      </div>
       <div className={Display ? "show" : "hide"}>
 
         <ButtonComponent hide={() => Hide()} />

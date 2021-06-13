@@ -11,7 +11,7 @@
 }
 
 .input {
-    padding: 25px 0px;
+    padding: 5px 0px;
 }
 
 .input-text {
@@ -24,8 +24,9 @@
 }
 
 .buttons {
+    display: block;
     background-color: #F6F8FB;
-    padding: 20px 0px;
+    padding: 15px 0px;
 }
 
 .btn-1 {
@@ -33,15 +34,11 @@
     border: 1px solid rgb(228, 228, 228);
 }
 
-.buttons-row {
-    justify-content: space-between;
+.close{
+    display: none !important;
 }
 
-.buttons-col1 {
-    margin-left: 10px;
-}
-
-.buttons-col2 button {
+.buttons-col2 {
     float: right;
     margin-right: 10px;
     background-color: grey !important;
@@ -63,14 +60,9 @@
     display: none;
 }
 
-.buttons-col2-2 button {
+.buttons-col2-2 {
     margin-right: 10px;
     float: right;
     background-color: blue;
 }
 
-@media only screen and (max-width:488px) {
-    .main-container {
-        width: 90%;
-    }
-}
